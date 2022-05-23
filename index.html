@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom css -->
+    <link rel="stylesheet" href=".//css/style.css">
     <title>ToDo List</title>
 </head>
 <body>
-    
+    <main>
+        <div class="flex-container">
+            <input type="text" placeholder="Create your todo List" class="input-search" id="search-bar">
+            <button class="search-btn" onclick="addToList()">Search</button>
+        </div>
+        <div class="added-Lists flex-container">
+            <button class="trash-icon" onclick="deleteBtn()"><i class="fa-solid fa-trash-can"></i></button>
+            <p class="list-p">Asad</p>
+            <button class="edit-icon" onclick="editBtn()"><i class="fa-solid fa-pen-to-square"></i></button>
+        </div>
+    </main>
+    <script src="./js/index.js"></script>
 </body>
 </html>

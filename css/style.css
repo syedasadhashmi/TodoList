@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: grey;
+}
+.flex-container{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.input-search{
+    width: 45%;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+}
+.search-btn{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+}
+.list-p{
+    padding: 5px 25px;
+    background-color: white;
+    width: 55%;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: inline-block;
+}
+.added-list{
+    position: relative;
+}
+.trash-icon {
+    position: absolute;
+    left: 233px;
+    top: 117px;
+    border: none;
+    background-color: white;
+    padding: 3px;
+}
+.edit-icon {
+    position: absolute;
+    top: 117px;
+    right: 240px;
+    border: none;
+    background-color: white;
+    padding: 3px;
+}
+.edit-icon:hover,.trash-icon:hover,.search-btn:hover{
+    cursor: pointer;
+}
