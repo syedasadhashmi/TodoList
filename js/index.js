@@ -129,6 +129,8 @@ function edit(e,arrToDo) {
 
 function del(e,arrToDo) {
     console.log(e,arrToDo);
+    let newArr = arrToDo.splice(e,1);
+    // arrToDo.pop(newArr);
     console.log(arrToDo.splice(e,1));
 }
 function deleteBtn(e,arrToDo) {
