@@ -35,6 +35,10 @@ body{
 .added-Lists{
     position: relative;
 }
+.form-style{
+    width: 100%;
+    text-align: center;
+}
 .trash-icon {
     position: absolute;
     left: 215px;
