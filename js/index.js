@@ -2,16 +2,19 @@ let searchBar = document.getElementById('search-bar');
 let mainListContainer = document.getElementById('main-list-container');
 let addBtn = document.getElementById('addBtn');
 // var dID= 1;
-let arrToDo = [];
+// var arrToDo = [];
 function addToDo() {
+    let ulID = 
     if (searchBar.value == "") {
         return;
     }
     arrToDo.push(searchBar.value);
-    printList(arrToDo);
+    // printList(arrToDo);
+    
     
 }
-function printList(arrToDo) {
+addBtn.addEventListener('click', printList);
+function printList() {
     arrToDo.forEach((element,i) => {
         let div = document.createElement('div');
         div.classList.add('added-Lists', 'flex-container');
@@ -136,3 +139,5 @@ function del(e,arrToDo) {
 function deleteBtn(e,arrToDo) {
     console.log('delete btn pressed');
 }
+
+
