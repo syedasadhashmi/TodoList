@@ -4,10 +4,14 @@
 body{
     background-color: grey;
 }
-.flex-container{
+.flex-container1{
     display: flex;
     justify-content: center;
     padding: 20px;
+}
+.flex-container{
+    display: flex;
+    justify-content: center;
 }
 .input-search{
     width: 45%;
@@ -28,21 +32,21 @@ body{
     border-radius: 10px;
     display: inline-block;
 }
-.added-list{
+.added-Lists{
     position: relative;
 }
 .trash-icon {
     position: absolute;
-    left: 233px;
-    top: 117px;
+    left: 215px;
+    top: 20px;
     border: none;
     background-color: white;
     padding: 3px;
 }
 .edit-icon {
     position: absolute;
-    top: 117px;
-    right: 240px;
+    top: 20px;
+    right: 225px;
     border: none;
     background-color: white;
     padding: 3px;
