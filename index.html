@@ -2,109 +2,112 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Fontawesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Custom css -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>ToDo List</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom css -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>ToDo List</title>
 </head>
 
 <body>
-    <main>
-        <div class="flex-container1">
-            <form action="#" class="form-style">
-                <input type="text" placeholder="Create your todo List" class="input-search" id="myInput" />
-                <button type="submit" class="search-btn" id="addBtn" onclick="newElement()">Add</button>
-            </form>
-        </div>
-        <div id="main-list-container">
-            <ul id="myUL"></ul>
-            <!-- 
+  <main>
+    <div class="flex-container1">
+      <form action="#" class="form-style">
+        <input type="text" placeholder="Create your todo List" class="input-search" id="myInput" />
+        <button type="submit" class="search-btn" id="addBtn" onclick="newElement()">Add</button>
+      </form>
+    </div>
+    <div id="main-list-container">
+      <ul id="myUL"></ul>
+      <!-- 
      <div class="added-Lists flex-container">
             <button class="trash-icon" onclick="deleteBtn()"><i class="fa-solid fa-trash-can"></i></button>
             <p class="list-p" id="p-1">Asad</p>
             <button class="edit-icon" onclick="editBtn()"><i class="fa-solid fa-pen-to-square"></i></button>
         </div>
  -->
-        </div>
-    </main>
-    <script>
-        var edit = document.getElementsByClassName("editTodo");
-        var j;
-        for (j = 0; j < edit.length; j++) {
-            edit[j].onclick = function() {
-              xtra = prompt("Edit your ToDo",inputValue);
-            console.log(xtra);
-            t.value = xtra;
-          }
-        }
-        // Click on a close button to hide the current list item
-        var close = document.getElementsByClassName("close");
-        var i;
-        for (i = 0; i < close.length; i++) {
-          close[i].onclick = function() {
-            var div = this.parentElement;
-            div.style.display = "none";
-          }
-        }
-        
-        
-        // Create a new list item when clicking on the "Add" button
-        function newElement() {
-          var li = document.createElement("li");
-          var inputValue = document.getElementById("myInput").value;
-          var t = document.createTextNode(inputValue);
-          li.appendChild(t);
-          if (inputValue === '') {
-            alert("You must write something!");
-          } else {
-            document.getElementById("myUL").appendChild(li);
-          }
-          document.getElementById("myInput").value = "";
-        
-          var span = document.createElement("SPAN");
-          var txt = document.createTextNode("\u00D7");
-          span.className = "close";
-          span.appendChild(txt);
-          
-          var closeDiv = document.createElement("DIV");
-          closeDiv.classList.add('closeDivFlex');
-          closeDiv.appendChild(span);
-          li.appendChild(span);
+    </div>
+  </main>
+  <script>
+    var edit = document.getElementsByClassName("editTodo");
+    var j;
+    for (j = 0; j < edit.length; j++) {
+      edit[j].onclick = function () {
+        xtra = prompt("Edit your ToDo", inputValue);
+        console.log(xtra);
+        t.value = xtra;
+      }
+    }
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("close");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function () {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
 
-          var spanEdit = document.createElement("SPAN");
-          var txtEdit = document.createTextNode("\u00D8");
-          spanEdit.className = "editTodo";
-          spanEdit.appendChild(txtEdit);
-          li.appendChild(spanEdit);
-          var editDiv = document.createElement("div");
-          editDiv.classList.add('editDivFlex');
-          editDiv.appendChild(spanEdit);
-          li.appendChild(spanEdit);
-        
-          for (i = 0; i < close.length; i++) {
-            close[i].onclick = function() {
-              var div = this.parentElement;
-              console.log(div);
-              div.style.display = "none";
-            }
-          }
-          var xtra;
-          for (j = 0; j < edit.length; j++) {
-            edit[j].onclick = function() {
-            xtra = prompt("Edit your ToDo",inputValue);
-            console.log(xtra);
-          }
+
+    // Create a new list item when clicking on the "Add" button
+    function newElement() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("myUL").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+
+      var closeDiv = document.createElement("DIV");
+      closeDiv.classList.add('closeDivFlex');
+      closeDiv.appendChild(span);
+      li.appendChild(span);
+
+      var spanEdit = document.createElement("SPAN");
+      var txtEdit = document.createTextNode("\u00D8");
+      spanEdit.className = "editTodo";
+      spanEdit.appendChild(txtEdit);
+      li.appendChild(spanEdit);
+      var editDiv = document.createElement("div");
+      editDiv.classList.add('editDivFlex');
+      editDiv.appendChild(spanEdit);
+      li.appendChild(spanEdit);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+          var div = this.parentElement;
+          console.log(div);
+          div.style.display = "none";
         }
-         
+      }
+      var xtra;
+      for (j = 0; j < edit.length; j++) {
+        edit[j].onclick = function (e) {
+          console.log(e);
+          var div2 = this.parentElement;
+          xtra = prompt("Edit your ToDo", inputValue);
+          console.log(xtra);
+          div2.innerHTML = xtra;
         }
-        </script>
-    <!-- <script src="./js/index.js"></script> -->
+      }
+
+    }
+  </script>
+  <!-- <script src="./js/index.js"></script> -->
 </body>
 
 </html>
