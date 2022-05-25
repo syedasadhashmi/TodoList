@@ -58,3 +58,34 @@ body{
 .edit-icon:hover,.trash-icon:hover,.search-btn:hover{
     cursor: pointer;
 }
+ul{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+li{
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    list-style: none;
+    width: 60%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 5px;
+}
+.editDivFlex{
+    display: flex;
+    align-items: flex-start;
+}
+.closeDivFlex{
+    display: flex;
+    align-items: flex-end;
+}
+.close{
+    display: flex;
+    margin-left: auto;
+}
+.editTodo{
+    margin: 2px;
+}

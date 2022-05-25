@@ -38,7 +38,9 @@
         var j;
         for (j = 0; j < edit.length; j++) {
             edit[j].onclick = function() {
-            console.log("zddfds")
+              xtra = prompt("Edit your ToDo",inputValue);
+            console.log(xtra);
+            t.value = xtra;
           }
         }
         // Click on a close button to hide the current list item
@@ -69,6 +71,10 @@
           var txt = document.createTextNode("\u00D7");
           span.className = "close";
           span.appendChild(txt);
+          
+          var closeDiv = document.createElement("DIV");
+          closeDiv.classList.add('closeDivFlex');
+          closeDiv.appendChild(span);
           li.appendChild(span);
 
           var spanEdit = document.createElement("SPAN");
@@ -76,13 +82,26 @@
           spanEdit.className = "editTodo";
           spanEdit.appendChild(txtEdit);
           li.appendChild(spanEdit);
+          var editDiv = document.createElement("div");
+          editDiv.classList.add('editDivFlex');
+          editDiv.appendChild(spanEdit);
+          li.appendChild(spanEdit);
         
           for (i = 0; i < close.length; i++) {
             close[i].onclick = function() {
               var div = this.parentElement;
+              console.log(div);
               div.style.display = "none";
             }
           }
+          var xtra;
+          for (j = 0; j < edit.length; j++) {
+            edit[j].onclick = function() {
+            xtra = prompt("Edit your ToDo",inputValue);
+            console.log(xtra);
+          }
+        }
+         
         }
         </script>
     <!-- <script src="./js/index.js"></script> -->
